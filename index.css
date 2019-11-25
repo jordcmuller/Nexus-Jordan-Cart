@@ -1,0 +1,268 @@
+/* General Components and Classes */
+
+
+
+/* .review, .price, .colour, .add, .size, .details {
+    padding-bottom: 10px;
+} */
+.row {
+    padding: 5px 15px;
+}
+.smalltext {
+    font-size: 15px;
+}
+
+.thinner {
+    margin: 0px 49px;
+    padding: 0px 15px;
+}
+
+.wider {
+    margin: 0px 39px;
+}
+.abs {
+    position: absolute;
+}
+.gray {
+    color: #aaaaaa;
+}
+
+
+/* Div sectioning appropriate changes */
+
+
+/* Header */
+header {
+    padding-top: 10px;
+}
+
+h1 {
+    padding-top: 15px;
+}
+
+/* Review */
+.review .count{
+    /* color: gray; */
+}
+
+.review div {
+    /* padding: 0; */
+    display: inline;
+}
+
+
+
+/* Price */
+.discount-price {
+    position: relative;
+    right: 15px;
+}
+
+.discount-price span {
+    font-size: 30px;
+    color: rgb(216, 112, 129);
+    font-weight: bold;
+}
+
+.price .textdrop {
+    position: relative;
+    top: 15px;
+}
+
+.price .container {
+    white-space: nowrap;
+}
+
+
+/* Colour */
+.colour div {
+    padding: 10px 0;
+}
+
+.colour {
+    padding-top: 10px;
+}
+
+.circle {
+    padding: 10px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.circle .myborder {
+    position: relative;
+    top: -10px;
+    border: none;
+    transform: scale(1.3);
+
+}
+
+.circle .myborder.selected {
+    transform: scale(1.2);
+
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    transition: 300ms ease-in-out 0s;
+} 
+
+.circle:hover {
+    transform: scale(1.1);
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding-right: 15px;
+    display: inline-block;
+    list-style-type: none;
+}
+
+
+
+
+/* Size */
+.size h4 {
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+
+/* Add To Cart */
+.add {
+    margin: 0px 0px;
+    padding: 30px 15px;
+    border-bottom: solid;
+    border-color: black;
+}
+
+.add .container {
+    white-space: nowrap;
+}
+
+.add .count, .add button {
+    border: solid;
+    border-width: 1px;
+    border-radius: 40px;
+    font-weight: bold;
+}
+
+.add .count {
+    width: fit-content;
+    padding: 20px 35px;
+}
+
+.add button {
+    background-color: black;
+    color: white;
+    padding: 15px 20%;
+    padding-bottom: 1.1em;
+    font-size: 1.2em;
+}
+
+
+/* Details */
+.details {
+    padding: 30px 15px;
+    border-bottom: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+
+
+/* Footer */
+
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.modal-content {
+    margin: 10% auto;
+    width: 55%;
+    border: black solid 1px;
+    border-radius: 0%;
+    padding: 5px 5%;
+
+    display: flex;
+    justify-content: right;
+
+
+    /* align-items: right; */
+    /* display: inline-block; */
+}
+
+.modal button {
+    background-color: white;
+    border: solid 1px;
+    border-radius: 5px;
+    display: inline;
+    margin: 5px;
+
+}
+
+.modal.quantity .desc {
+    padding: 5% 0;
+}
+
+.modal.quantity .counter {
+    width: fit-content;
+    margin: 0;
+}
+
+.modal.quantity .counter .number {
+    font-size: 30px;
+}
+
+.modal.quantity .counter span {
+    /* margin: 5px 10px; */
+    padding: 5px 10px;
+}
+
+.modal.quantity .counter i {
+    position: relative;
+    top: 12px;
+}
+
+.modal.quantity .agree-cancel {
+    height: fit-content;
+    padding-top: 10%;
+    padding-bottom: 5%;
+
+    /* position: relative; */
+    /* left: 55%; */
+}
+
+.modal.quantity #agree {
+    border-color: darkgreen;
+    background-color: palegreen;
+}
+
+.modal.quantity #cancel {
+    border-color: rgb(150, 0, 0);
+    background-color: rgb(251, 152, 152);
+}
+
+.modal.quantity .modal-content div{
+    width: fit-content;
+    position: relative;
+    float: right;
+    /* position: relative; */
+    /* left: 40%; */
+}
+
+#need-help {
+ cursor: pointer;    
+}
