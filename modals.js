@@ -32,35 +32,46 @@ cancel.onclick = function(){
 // Close and take quantity on Agree
 agree.onclick = function(){
     // Get chosen amount
-    let count = document.getElementById('count').innerHTML;
+    let count = document.getElementById('count');
+    count_val = Number(count.innerHTML);
     
-    // Set the final amount to be the chosen amount
-    document.getElementById('amount').innerHTML = count;
+    if(count_val != 0){
 
-    // Close modal
-    add_modal.style.display = 'none';
+        // Set the final amount to be the chosen amount
+        amount = document.getElementById('amount');
+        let amount_val = Number(amount.innerHTML);
+        amount.innerHTML = amount_val + count_val;
+        count.innerHTML = 0;
 
-    // Change button label
-    add_to_cart.innerHTML = 'Checkout Now';
+        // Close modal
+        add_modal.style.display = 'none';
+
+        // Make checkout button visible
+        let checkout = document.getElementById('checkout');
+        checkout.style.display = 'inline';
 
 
-    // Adding the colour dics to description
 
-    // Get the colour name
-    let colour_desc = document.getElementById('colour-desc');
-    let colour = colour_desc.innerHTML;
+        // Adding the colour discs to description
 
-    // Get Details section list
-    let detsec = document.getElementById('details-ul');
+        // Get the colour name
+        let colour_desc = document.getElementById('colour-desc');
+        let colour = colour_desc.innerHTML;
 
-    // Create new circles
-    for (let index = 0; index < count; index++) {
-        let disc = document.createElement('div');
-        disc.classList.add('circle');
-        disc.style.background = colour;
-        let li = document.createElement('li');
-        li.appendChild(disc);
-        detsec.appendChild(li);
+        // Get Details section list
+        let detsec = document.getElementById('details-ul');
+
+        // Create new circles
+        for (let index = 0; index < count_val; index++) {
+            let disc = document.createElement('div');
+            disc.classList.add('circle');
+            disc.style.background = colour;
+            let li = document.createElement('li');
+            li.appendChild(disc);
+            detsec.appendChild(li);
+        }
+    } else {
+        add_modal.style.display = 'none';
     }
     
 }

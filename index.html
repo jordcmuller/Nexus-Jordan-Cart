@@ -22,139 +22,142 @@
 
 </head>
 <body>
-    <div class="container thinner">
-        <!-- heading section -->
-        <header>
-            <h1>HICKIES Originals</h1>
-        </header>
+    <div class="outer">
+        <div class="container thinner">
+            <!-- heading section -->
+            <header>
+                <h1>HICKIES Originals</h1>
+            </header>
 
-        <!-- review section -->
-        <div class="review row">
+            <!-- review section -->
+            <div class="review row">
 
-            <!-- stars -->
-            <div class="col-md-3 col-sm-12">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
+                <!-- stars -->
+                <div class="col-sm-4 col-xs-4">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <div class="col-sm-4 col-xs-4">
+                    <span class="count gray">1,293 reviews</span>
+                </div>
+
             </div>
-            <div class="col-md-3 col-sm-12">
-                <span class="count gray">1,293 reviews</span>
+            
+            <!-- price section -->
+            <div class="price row">
+                <div id="discount" class="col-sm-4 col-xs-6 discount-price"><span class="gray">$14.99</span></div>
+                <div id="price" class="col-sm-3 col-xs-3"><span class="textdrop gray">$17.99</span></div>
+                <div class="col-sm-3 col-xs-3"><span class="textdrop gray">25% OFF</span></div>
+                <br>
+            </div>
+            <div class="price row">
+                <div class="col-12 online">
+                    ONLINE EXCLUSIVE
+                </div>
             </div>
 
-        </div>
+
+            <!-- colour section -->
+            <div class="colour">
+                <div>COLOR: <span id="colour-desc">Color name</span></div>
         
-        <!-- price section -->
-        <div class="price row">
-            <div class="col-sm-3 col-xs-12 discount-price"><span class="gray">$14.99</span></div>
-            <div class="col-sm-2 col-xs-5"><span class="textdrop gray">$17.99</span></div>
-            <div class="col-sm-2 col-xs-5"><span class="textdrop gray">25% OFF</span></div>
-            <br>
-        </div>
-        <div class="price row">
-            <div class="col-12 online">
-                ONLINE EXCLUSIVE
+                <!-- colour discs -->
+                <ul id='colour-ul'>
+                    <!-- Colour circles get added here -->
+                </ul>
             </div>
-        </div>
 
-
-        <!-- colour section -->
-        <div class="colour">
-            <div>COLOR: <span id="colour-desc">Color name</span></div>
-      
-            <!-- colour discs -->
-            <ul id='colour-ul'>
-                <!-- Colour circles get added here -->
-            </ul>
-        </div>
-
-        <!-- size section -->
-        <div class="size">
-            <div class="row">
-                <div class="col-12">
-                    <h4><span class="smalltext">Size Guide</span></h4>
-                </div>
-                <div class="col-12">
-                    <h4><span class="smalltext">Your Custom Fit</span></h4>
+            <!-- size section -->
+            <div class="size">
+                <div class="row">
+                    <div class="col-12">
+                        <h4><span class="smalltext">Size Guide</span></h4>
+                    </div>
+                    <div class="col-12">
+                        <h4><span class="smalltext">Your Custom Fit</span></h4>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </div>
-    <div class="container wider">
-        <!-- add to cart section -->
-        <div class="add row">
-            <div class="col-sm-3 col-xs-1">
+        </div>
+        <div class="container wider">
+            <!-- add to cart section -->
+            <div class="add">
+                    
                 <div id='amount' class="count">0</div>
-            </div>
-            <div class="col-sm-9 col-xs-6">
                 <button id="add-to-cart">Add to Cart</button>
+                <button id="checkout">Checkout Now</button>
+                <!-- <div id="snackbar">Please select an</div> -->
+
+            </div>
+
+            <!-- details section -->
+            <div class="details">
+                <h4><span class="smalltext">DETAILS</span></h4>
+            
+                <ul id='details-ul'>
+                    <!-- Colour circles get added here -->
+                </ul>
+        
+            
+            </div>
+
+            <!-- bottom of the page -->
+            <footer>
+                <h4><span id="need-help" class="smalltext">Need Help?</span></h4>
+                <h4><span class="smalltext">Shipping & Returns</span></h4>
+            </footer>
+        </div>
+        
+        <!-- Modal Boxes -->
+        
+        <!-- Add to Cart -->
+        <div id="modal-add" class="quantity modal">
+            <div class='modal-content'>
+                <div class="desc">
+                    <span>Please add the quantity of the item you have selected</span>
+                </div>
+                <div class="counter">
+                    <span id='selected-colour'>Insert Selected Colour</span>
+                    <i id="decrement" class="fa fa-minus-circle fa-4x"></i>
+                    <span id='count' class="number">0</span>
+                    <i id="increment" class="fa fa-plus-circle fa-4x"></i>
+                </div>
+                <div class="agree-cancel">
+                    <button id="agree">Agree</button>
+                    <button id="cancel">Cancel</button>
+                </div>
             </div>
         </div>
+        
 
-        <!-- details section -->
-        <div class="details">
-            <h4><span class="smalltext">DETAILS</span></h4>
-        
-            <ul id='details-ul'>
-                <!-- Colour circles get added here -->
-            </ul>
-    
-        
+
+
+        <!-- Need Help Section -->
+        <div id="modal-help" class="modal">
+            <div class="modal-content">
+                Choose your preferred colour.
+                <br>
+                Click "Add to Cart".
+                <br>
+                Choose how many colour items you want.
+                <br>
+                <button id="close-button">Close</button>
         </div>
 
-        <!-- bottom of the page -->
-        <footer>
-            <h4><span id="need-help" class="smalltext">Need Help?</span></h4>
-            <h4><span class="smalltext">Shipping & Returns</span></h4>
-        </footer>
-    </div>
-    
-    <!-- Modal Boxes -->
-    
-    <!-- Add to Cart -->
-    <div id="modal-add" class="quantity modal">
-        <div class='modal-content'>
-            <div class="desc">
-                <span>Please add the quantity of the item you have selected</span>
-            </div>
-            <div class="counter">
-                <span id='selected-colour'>Insert Selected Colour</span>
-                <i id="decrement" class="fa fa-minus-circle fa-4x"></i>
-                <span id='count' class="number">0</span>
-                <i id="increment" class="fa fa-plus-circle fa-4x"></i>
-            </div>
-            <div class="agree-cancel">
-                <button id="agree">Agree</button>
-                <button id="cancel">Cancel</button>
-            </div>
         </div>
-    </div>
-    
-
-
-
-    <!-- Need Help Section -->
-    <div id="modal-help" class="modal">
-        <div class="modal-content">
-            Choose your preferred colour.
-            <br>
-            Click "Add to Cart".
-            <br>
-            Choose how many colour items you want.
-            <br>
-            <button id="close-button">Close</button>
-    </div>
-
-    </div>
+            
         
-    
-    
-    <script src="main.js"></script>
-    <script src='modals.js'></script>
+        <script src="Tray.js"></script>
+        <script src="Colour.js"></script>
+        <script src="main.js"></script>
+        <script src='modals.js'></script>
+        
 
-
+    </div>
 
 
 </body>

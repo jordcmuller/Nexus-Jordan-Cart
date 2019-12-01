@@ -1,10 +1,18 @@
 /* General Components and Classes */
 
 
+body {
+    margin: 0 auto;
+    /* width: max-content; */
+}
 
-/* .review, .price, .colour, .add, .size, .details {
-    padding-bottom: 10px;
-} */
+
+.outer {
+    margin: 0 auto;
+    max-width: 800px;
+    min-width: 470px;
+}
+
 .row {
     padding: 5px 15px;
 }
@@ -13,12 +21,12 @@
 }
 
 .thinner {
-    margin: 0px 49px;
+    margin: 0px 10px;
     padding: 0px 15px;
 }
 
 .wider {
-    margin: 0px 39px;
+    margin: 0px 0;
 }
 .abs {
     position: absolute;
@@ -41,13 +49,10 @@ h1 {
 }
 
 /* Review */
-.review .count{
-    /* color: gray; */
-}
 
 .review div {
-    /* padding: 0; */
     display: inline;
+    width: max-content;
 }
 
 
@@ -67,11 +72,19 @@ h1 {
 .price .textdrop {
     position: relative;
     top: 15px;
+    /* width: max-content; */
 }
 
 .price .container {
     white-space: nowrap;
 }
+
+
+.price div {
+    display: inline;
+    width: max-content;
+}
+
 
 
 /* Colour */
@@ -138,6 +151,7 @@ li {
     padding: 30px 15px;
     border-bottom: solid;
     border-color: black;
+    display: flex;
 }
 
 .add .container {
@@ -157,11 +171,18 @@ li {
 }
 
 .add button {
+    width: fit-content;
     background-color: black;
     color: white;
-    padding: 15px 20%;
+    padding: 15px 25px;
     padding-bottom: 1.1em;
     font-size: 1.2em;
+    margin: 0 auto;
+
+}
+
+.add #checkout {
+    display: none;
 }
 
 
@@ -191,14 +212,10 @@ li {
 
 .modal-content {
     margin: 10% auto;
-    width: 55%;
+    width: 440px;
     border: black solid 1px;
     border-radius: 0%;
-    padding: 5px 5%;
-
-    display: flex;
-    justify-content: right;
-
+    padding: 5px 30px;
 
     /* align-items: right; */
     /* display: inline-block; */
@@ -214,7 +231,8 @@ li {
 }
 
 .modal.quantity .desc {
-    padding: 5% 0;
+    padding: 15px 0;
+    width: max-content;
 }
 
 .modal.quantity .counter {
@@ -237,6 +255,7 @@ li {
 }
 
 .modal.quantity .agree-cancel {
+    width: max-content;
     height: fit-content;
     padding-top: 10%;
     padding-bottom: 5%;
@@ -256,11 +275,10 @@ li {
 }
 
 .modal.quantity .modal-content div{
-    width: fit-content;
-    position: relative;
-    float: right;
+    /* width: fit-content; */
     /* position: relative; */
-    /* left: 40%; */
+    margin-right: 0%;
+    margin-left: auto;
 }
 
 #need-help {
